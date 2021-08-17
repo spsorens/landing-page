@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🐳 Whales</title>
+    <style>
+      body {
+        background: linear-gradient(
+          178deg,
+          rgba(201, 234, 252, 0.51) 14.9%,
+          rgba(139, 192, 216, 0.73) 80%
+        );
+      }
+      .whales {
+        text-align: center;
+        border-radius: 10px;
+        color: #407088;
+        max-height: 100%;
+        border-width: 10px;
+        padding: 10px 50px 50px 50px;
+      }
+      h1,
+      h2 {
+        text-align: center;
+        color: #113f67;
+        font-family: marker felt, fantasy;
+      }
+      hr {
+        max-width: 80%;
+        font-weight: 500;
+      }
+      .orca {
+        border-radius: 15px;
+        height: 200px;
+        width: 400px;
+        border: 1px solid #113f67;
+      }
+      .learn {
+        color: #38598b;
+        text-decoration: none;
+      }
+      .learn:hover {
+        text-decoration: underline;
+      }
+      .gif {
+        border-radius: 180px;
+        height: 160px;
+        width: 260px;
+        border: 1px solid #113f67;
+      }
+      p {
+        margin: 10px 300px;
+        display: block;
+        text-align: justify;
+        font-weight: 220;
+        line-height: 28px;
+      }
+      .importance {
+        font-size: larger;
+        font-weight: bold;
+      }
+      .join {
+        display: block;
+        margin: 0 auto;
+        background-color: #f5ebeb;
+        color: #3c7d87;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+        font-weight: bold;
+        font-size: 15px;
+        height: 48px;
+      }
+      .join:hover {
+        cursor: pointer;
+        background-color: #070f4e;
+        color: #f5ebeb;
+        opacity: 0.9;
+      }
+      .footer {
+        text-align: center;
+        color: #113f67;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="whales">
+      <h1>Majestic Orcas</h1>
+      <h2>Protect our Whales!</h2>
+      <img
+        class="orca"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/007/889/original/killer_whale.jpeg?1619380543"
+      />
+      <hr />
+
+      <p>
+        The <strong> killer whale</strong>, also known as <strong>orca</strong>,
+        is the ocean’s top predator. It is the largest member of the Delphinidae
+        family, or dolphins. Members of this family include all dolphin species,
+        as well as other larger species such as long-finned pilot whales and
+        short-finned pilot whales, whose common names also contain "whale"
+        instead of "dolphin."
+      </p>
+      <a
+        href="https://www.fisheries.noaa.gov/species/killer-whale"
+        target="_blank"
+        class="learn"
+      >
+        Learn more <strong>Here</strong></a
+      >
+      <hr />
+      <img
+        class="gif"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/007/812/original/1073f350da2a46fa104d1a035bb2e144.gif?1619306638"
+      />
+      <p>
+        It is <span class="importance"> important </span> for us as humans to
+        <span class="importance">protect</span> those we share the earth and
+        waters with. Let's not lose sight of the majesty of the creatures from
+        the Ocean! Join us in a pledge to learn more about our cohabitants and
+        protect each other!
+      </p>
+
+      <br />
+      <button class="join">🐳 Join Us! 🐳</button>
+      <br />
+    </div>
+    <div class="footer">
+      Page designed by <em>Shannan Sorenson</em> for
+      <strong>SheCodes</strong>
+    </div>
+    <script>
+      function signUp() {
+        let response = prompt("Do you wish to save the whales?");
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email?");
+        if (response === "Yes" || response === "yes") {
+          alert(
+            "Thank you " + name + "! You are helping our neighbors in the sea!"
+          );
+        } else {
+          alert("Sorry to hear that " + name);
+        }
+      }
+
+      let signUpButton = document.querySelector(".join");
+      signUpButton.addEventListener("click", signUp);
+    </script>
+  </body>
+</html>
